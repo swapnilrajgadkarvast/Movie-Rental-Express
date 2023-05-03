@@ -1,0 +1,15 @@
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ4YWEwMTZjNjI4YjQ5MWJlNmU5ZjUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODI0ODM3NDl9.rBEgI07CpZwmJHaDU2z3fSlkRiTjFQ3t4CCnvo9cPoQ
+
+200: OK
+201: Created
+204: No Content
+300: Multiple Choices
+301: Moved Permanently
+302: Found
+304: Not Modified
+400: Bad Request - The request message contains invalid characters or syntax errors.
+401: Unauthorized
+403: Forbidden
+404: Not Found
+500: Internal Server Error
+503: Service Unavailable
