@@ -10,7 +10,7 @@ router.post("/", async (req, res) => {
     if (error) throw new Error(error.message);
 
     let user = await User.findOne({ email: req.body.email })
-    if (!user) res.status(404).json("invalid email")
+    if (!user) res.status(404).json("Invalid email")
 
     //log in validation
     let isValid = await bcrypt.compare(req.body.password, user.password)

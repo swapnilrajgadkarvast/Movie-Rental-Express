@@ -28,6 +28,7 @@ function validateCustomer(input){
         phone: Joi.string().min(7).max(10).required(),
         isGold : Joi.boolean().required()
     })
+    return schema.validate(input)
 }
 
 module.exports = {Customer, validateCustomer}

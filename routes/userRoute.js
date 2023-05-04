@@ -48,11 +48,7 @@ router.post("/", async(req, res) => {
         from: config.get("email"),
         to: users.email,
         subject: "Movie Rental Registration Successful",
-        text: textMessage,
-        // html: `<h3>Hello ${user.name}</h3>
-        //      <p>Welcome to Movie Rental Portal</p>
-        //      <p>Your registration is successfull.</p>
-        //      <p>Your Password is <b>${req.body.password}</b></p>   `,
+        text: textMessage
     }
 
     transporter.sendMail(message, (error) => {
