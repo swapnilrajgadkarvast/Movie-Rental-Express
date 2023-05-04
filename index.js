@@ -12,6 +12,8 @@ const allRoutes = require("./startup/routes");
 app.use(express.json());
 app.use(error);
 app.use(Process);
+
+
 startServer(app);
 allRoutes(app);
 

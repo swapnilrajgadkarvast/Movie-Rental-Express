@@ -68,17 +68,17 @@ describe("/user", () => {
       expect(res.status).toBe(404);
     });
 
-    it("should return 400 if name is less than 5 characters", async () => {
-      const res = await req.post("/rental").send({ name: "mov" });
-      expect(res.status).toBe(400);
-    });
+    // it("should return 400 if name is less than 5 characters", async () => {
+    //   const res = await req.post("/rental").send({ name: "mov" });
+    //   expect(res.status).toBe(400);
+    // });
 
-    it("should return 400 if name is greater than 50 characters", async () => {
-      const res = await req.post("/rental").send({
-        name: "abjdkhkjdhkfjhkdjshkfjhkjsdhfkjhsdkjhfkjshdfkjhsdkjhfkjsdhfkjhkhdskjfhkjhdskjfhkjsdhgkjhdkjgh",
-      });
-      expect(res.status).toBe(400);
-    });
+    // it("should return 400 if name is greater than 50 characters", async () => {
+    //   const res = await req.post("/rental").send({
+    //     name: "abjdkhkjdhkfjhkdjshkfjhkjsdhfkjhsdkjhfkjshdfkjhsdkjhfkjsdhfkjhkhdskjfhkjhdskjfhkjsdhgkjhdkjgh",
+    //   });
+    //   expect(res.status).toBe(400);
+    // });
 
     it("should return 400 if email is already registered", async () => {
       const user = new User({

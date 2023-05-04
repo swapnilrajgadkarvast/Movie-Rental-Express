@@ -47,10 +47,6 @@ router.delete("/:id", admin,auth, async (req, res) => {
   if (!genre) return res.status(403).send("Genre with given id is not found.")
   res.send(genre)
 
-
-// const genre = await Genre.findByIdAndDelete(req.params.id);
-//     if (!genre) throw new Error('Data not found');
-//     res.json({ message: 'Deleted Successfully' });
 });
 
 module.exports = router;

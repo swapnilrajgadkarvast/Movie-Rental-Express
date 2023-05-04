@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
   res.send(customer);
 });
 
-router.put("/:id",auth, async (req, res) => {
+router.put("/:id", auth, async (req, res) => {
   const validation = validateCustomer(req.body);
   if (!validation) return res.status(400).send(validation.error);
 
@@ -47,7 +47,7 @@ router.put("/:id",auth, async (req, res) => {
   res.send(customers);
 });
 
-router.delete("/:id",admin,auth, async (req, res) => {
+router.delete("/:id", admin, auth, async (req, res) => {
   const customers = await Customer.findByIdAndDelete(req.params.id);
 
   if (!customers)
