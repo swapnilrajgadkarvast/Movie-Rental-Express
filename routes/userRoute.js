@@ -56,7 +56,7 @@ router.post("/", async(req, res) => {
             return res.status(500).json({ error })
         } else {
             const userData = _.pick(users, ["_id", "name", "email", "isAdmin"])
-            res.send("Email sent successfully", userData)
+            res.send({ message: "Email sent successfully", userData });
         }
     })
 
@@ -81,7 +81,7 @@ router.put("/:id",auth,async (req, res) => {
 })
 
 
-router.delete("/:id",admin, async(req, res) => {
+router.delete("/:id",admin,auth,validateId, async(req, res) => {
     const users = await User.findByIdAndDelete(req.params.id)
 
     if (!users) return res.status(404).send("User with given id is not found.")

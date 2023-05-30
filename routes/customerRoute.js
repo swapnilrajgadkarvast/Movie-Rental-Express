@@ -47,7 +47,7 @@ router.put("/:id", auth, async (req, res) => {
   res.send(customers);
 });
 
-router.delete("/:id", auth,admin,  async (req, res) => {
+router.delete("/:id", auth, admin, validateId, async (req, res) => {
   const customers = await Customer.findByIdAndDelete(req.params.id);
 
   if (!customers)
