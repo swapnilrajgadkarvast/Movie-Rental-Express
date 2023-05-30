@@ -1,2 +1,2 @@
 # Movie-Rental-Express
-This Movie Rental App Backend using NodeJs and ExpressJs.
+This is Movie Rental App Backend using NodeJs and ExpressJs.
